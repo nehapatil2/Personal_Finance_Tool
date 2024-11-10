@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Update Expense</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; text-align: center;">
+    <h1 style="color: #333;">Update Expense</h1>
+    <form method="post" style="max-width: 400px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <label for="amount" style="display: block; margin-bottom: 10px; color: #333;">Amount:</label>
+        <input type="text" id="amount" name="amount" value="{{ expense.amount }}" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+        
+        <label for="description" style="display: block; margin-bottom: 10px; color: #333;">Description:</label>
+        <input type="text" id="description" name="description" value="{{ expense.description }}" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+        
+        <label for="date" style="display: block; margin-bottom: 10px; color: #333;">Date:</label>
+        <input type="date" id="date" name="date" value="{{ expense.date.strftime('%Y-%m-%d') }}" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px;">
+
+        <button type="submit" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Update Expense</button>
+    </form>
+</body>
+
+</html>

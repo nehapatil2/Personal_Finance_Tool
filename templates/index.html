@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Personal Finance Management Tool</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center; padding: 20px;">
+  <h1 style="color: #333;">Welcome to Your Personal Finance Management Tool</h1>
+  <ul style="list-style-type: none; padding: 0;">
+      <li style="margin-bottom: 10px;">
+          <a href="{{ url_for('add_income') }}" style="display: inline-block; padding: 10px 20px; background-color: #2575fc; color: #fff; text-decoration: none; border-radius: 5px;">Add Income</a>
+      </li>
+      <li style="margin-bottom: 10px;">
+          <a href="{{ url_for('add_expense') }}" style="display: inline-block; padding: 10px 20px; background-color: #dc3545; color: #fff; text-decoration: none; border-radius: 5px;">Add Expense</a>
+      </li>
+      <li>
+          <a href="{{ url_for('add_savings_goal') }}" style="display: inline-block; padding: 10px 20px; background-color: #28a745; color: #fff; text-decoration: none; border-radius: 5px;">Add Savings Goal</a>
+      </li>
+  </ul>
+</body>
+
+</html>

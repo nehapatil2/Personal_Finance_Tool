@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Update Savings Goal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; text-align: center;">
+    <h1 style="color: #333;">Update Savings Goal</h1>
+    <form method="post" style="max-width: 400px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <label for="target_amount" style="display: block; margin-bottom: 10px; color: #333;">Target Amount:</label>
+        <input type="text" id="target_amount" name="target_amount" value="{{ goal.target_amount }}" required style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+        
+        <label for="description" style="display: block; margin-bottom: 10px; color: #333;">Description:</label>
+        <input type="text" id="description" name="description" value="{{ goal.description }}" required style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+        
+        <label for="start_date" style="display: block; margin-bottom: 10px; color: #333;">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" value="{{ goal.start_date.strftime('%Y-%m-%d') }}" required style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+        
+        <label for="due_date" style="display: block; margin-bottom: 10px; color: #333;">Due Date:</label>
+        <input type="date" id="due_date" name="due_date" value="{{ goal.due_date.strftime('%Y-%m-%d') }}" required style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px;">
+
+        <button type="submit" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Update Goal</button>
+    </form>
+</body>
+
+</html>
